@@ -1,0 +1,7 @@
+{
+  "message": "Hola Vite",
+  "users": [
+    { "name": "Derek Rojas" },
+    { "name": "Sofia Oporta" }
+  ]
+}
