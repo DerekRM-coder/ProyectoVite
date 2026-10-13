@@ -1,12 +1,21 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   root: "src",
-  base: "/repo-name/",
+
+  base: command === "build"
+    ? "/ProyectoVite/"
+    : "/",
+
   publicDir: "../public",
+
   plugins: [],
-  server: { port: 1234 },
+
+  server: {
+    port: 1234
+  },
+
   build: {
-    outDir: "../dist",
+    outDir: "../dist"
   }
-});
+}));
